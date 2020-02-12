@@ -4,32 +4,29 @@ public class Empleados extends Persona {
 
 	private int anioIncorporacion;
 	private String despacho;
-	private String tipoEmpleado;
 	private String departamentoTrabajo; //Para profesores
 	private String seccionAsignada; //Para personal de servicio
 
 	public Empleados(String nombre, String apellidos, String run, String estadoCivil, int anioIncorporacion,
-			String despacho, String tipoEmpleado, String departamentoTrabajo) {
+			String despacho, String departamentoTrabajo) {
 		super(nombre, apellidos, run, estadoCivil);
 		this.anioIncorporacion = anioIncorporacion;
 		this.despacho = despacho;
-		this.tipoEmpleado = tipoEmpleado;
 		this.departamentoTrabajo = departamentoTrabajo;
 	}
 	
 	public Empleados(String nombre, String apellidos, String run, int anioIncorporacion, String estadoCivil, 
-			String despacho, String tipoEmpleado, String seccionAsignada) {
+			String despacho, String seccionAsignada) {
 		super(nombre, apellidos, run, estadoCivil);
 		this.anioIncorporacion = anioIncorporacion;
 		this.despacho = despacho;
-		this.tipoEmpleado = tipoEmpleado;
 		this.seccionAsignada = seccionAsignada;
 	}
 
 	@Override
 	public String toString() {
 		return "Empleados [anioIncorporacion=" + anioIncorporacion + ", despacho=" + despacho + ", tipoEmpleado="
-				+ tipoEmpleado + ", departamentoTrabajo=" + departamentoTrabajo + ", seccionAsignada=" + seccionAsignada
+				+ ", departamentoTrabajo=" + departamentoTrabajo + ", seccionAsignada=" + seccionAsignada
 				+ "]";
 	}
 
@@ -52,21 +49,9 @@ public class Empleados extends Persona {
 		this.despacho = despacho;
 	}
 
-
-	public String getTipoEmpleado() {
-		return tipoEmpleado;
-	}
-
-
-	public void setTipoEmpleado(String tipoEmpleado) {
-		this.tipoEmpleado = tipoEmpleado;
-	}
-
-
 	public String getDepartamentoTrabajo() {
 		return departamentoTrabajo;
 	}
-
 
 	public void setDepartamentoTrabajo(String departamentoTrabajo) {
 		this.departamentoTrabajo = departamentoTrabajo;
@@ -77,7 +62,6 @@ public class Empleados extends Persona {
 		return seccionAsignada;
 	}
 
-
 	public void setSeccionAsignada(String seccionAsignada) {
 		this.seccionAsignada = seccionAsignada;
 	}
@@ -85,7 +69,7 @@ public class Empleados extends Persona {
 	public void imprimir() {
 		//System.out.println("Nombre: " + getNombre() + "\n apellidos: " + getApellidos() + "\n Run: " + getRun() + "\n Estado Civil: " + getEstadoCivil());
 		super.imprimir();
-		System.out.println("Año Incorporación: " + getAnioIncorporacion() + "\n Despacho: " + getDespacho() + "\n Tipo Empleado" + getTipoEmpleado() + "\n Departamento Trabajo: " + getDepartamentoTrabajo() + "\n Sección Asignada" + getSeccionAsignada());
+		System.out.println("Año Incorporación: " + getAnioIncorporacion() + "\n Despacho: " + getDespacho() + "\n Departamento Trabajo: " + getDepartamentoTrabajo() + "\n Sección Asignada" + getSeccionAsignada());
 	}
 	
 }
