@@ -81,5 +81,11 @@ public class Empleados extends Persona {
 	public void setSeccionAsignada(String seccionAsignada) {
 		this.seccionAsignada = seccionAsignada;
 	}
-
+	
+	public void imprimir() {
+		//System.out.println("Nombre: " + getNombre() + "\n apellidos: " + getApellidos() + "\n Run: " + getRun() + "\n Estado Civil: " + getEstadoCivil());
+		super.imprimir();
+		System.out.println("Año Incorporación: " + getAnioIncorporacion() + "\n Despacho: " + getDespacho() + "\n Tipo Empleado" + getTipoEmpleado() + "\n Departamento Trabajo: " + getDepartamentoTrabajo() + "\n Sección Asignada" + getSeccionAsignada());
+	}
+	
 }

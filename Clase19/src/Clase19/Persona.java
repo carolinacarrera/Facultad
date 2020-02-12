@@ -52,4 +52,8 @@ public class Persona {
 		this.estadoCivil = estadoCivil;
 	}
   
+	public void imprimir() {
+		System.out.println("Nombre: " + getNombre() + "\n Apellidos: " + getApellidos() + "\n Run: " + getRun() + "\n Estado Civil: " + getEstadoCivil());	
+	}
+	
 }
