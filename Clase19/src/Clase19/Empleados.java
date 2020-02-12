@@ -11,6 +11,22 @@ public class Empleados extends Persona{
 		this.anioIncorporacion = anioIncorporacion;
 		this.despacho = despacho;
 	}
+
+	public int getAnioIncorporacion() {
+		return anioIncorporacion;
+	}
+
+	public void setAnioIncorporacion(int anioIncorporacion) {
+		this.anioIncorporacion = anioIncorporacion;
+	}
+
+	public String getDespacho() {
+		return despacho;
+	}
+
+	public void setDespacho(String despacho) {
+		this.despacho = despacho;
+	}
 	
 	
 
