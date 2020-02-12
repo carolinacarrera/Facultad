@@ -52,5 +52,5 @@ public class Persona {
 	public void setEstadoCivil(String estadoCivil) {
 		this.estadoCivil = estadoCivil;
 	}
-  
+ 
 }
