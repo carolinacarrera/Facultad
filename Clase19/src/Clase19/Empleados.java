@@ -1,33 +1,48 @@
 package Clase19;
 
-public class Empleados extends Persona{
-	
-	private int anioIncorporacion;
-	private String despacho;
-	
-	public Empleados(String nombre, String apellidos, String run, String estadoCivil, int anioIncorporacion, String despacho) {
-		super(nombre, apellidos, run, estadoCivil);
-		// TODO Auto-generated constructor stub
-		this.anioIncorporacion = anioIncorporacion;
-		this.despacho = despacho;
-	}
+public class Empleados extends Persona {
+//empleados
+String TipoDeEmpleado;
+//Profesores
+String DepartamentoTrabajo;
+//Personal de Servicio
+String SeccionAsignada;
 
-	public int getAnioIncorporacion() {
-		return anioIncorporacion;
-	}
+    public Empleados(String TipoDeEmpleado, String DepartamentoTrabajo, String SeccionAsignada, String nombre, String apellidos, String rut, String Estadocivil) {
+        super(nombre, apellidos, rut, Estadocivil);
+        this.TipoDeEmpleado = TipoDeEmpleado;
+        this.DepartamentoTrabajo = DepartamentoTrabajo;
+        this.SeccionAsignada = SeccionAsignada;
+    }
 
-	public void setAnioIncorporacion(int anioIncorporacion) {
-		this.anioIncorporacion = anioIncorporacion;
-	}
+    public String getTipoDeEmpleado() {
+        return TipoDeEmpleado;
+    }
 
-	public String getDespacho() {
-		return despacho;
-	}
+    public void setTipoDeEmpleado(String TipoDeEmpleado) {
+        this.TipoDeEmpleado = TipoDeEmpleado;
+    }
 
-	public void setDespacho(String despacho) {
-		this.despacho = despacho;
-	}
-	
-	
+    public String getDepartamentoTrabajo() {
+        return DepartamentoTrabajo;
+    }
 
+    public void setDepartamentoTrabajo(String DepartamentoTrabajo) {
+        this.DepartamentoTrabajo = DepartamentoTrabajo;
+    }
+
+    public String getSeccionAsignada() {
+        return SeccionAsignada;
+    }
+
+    public void setSeccionAsignada(String SeccionAsignada) {
+        this.SeccionAsignada = SeccionAsignada;
+    }
+
+    @Override
+    public String toString() {
+        return "Empleados{" + "TipoDeEmpleado=" + TipoDeEmpleado + ", DepartamentoTrabajo=" + DepartamentoTrabajo + ", SeccionAsignada=" + SeccionAsignada + '}';
+    }
+    
+    
 }
