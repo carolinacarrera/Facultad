@@ -1,48 +1,77 @@
 package Clase19;
 
 public class Empleados extends Persona {
-//empleados
-private String TipoDeEmpleado;
-//Profesores
-private String DepartamentoTrabajo;
-//Personal de Servicio
-private String SeccionAsignada;
 
-    public Empleados(String TipoDeEmpleado, String DepartamentoTrabajo, String SeccionAsignada, String nombre, String apellidos, String rut, String Estadocivil) {
-        super(nombre, apellidos, rut, Estadocivil);
-        this.TipoDeEmpleado = TipoDeEmpleado;
-        this.DepartamentoTrabajo = DepartamentoTrabajo;
-        this.SeccionAsignada = SeccionAsignada;
-    }
+	private int anioIncorporacion;
+	private String despacho;
+	private String tipoEmpleado;
+	private String departamentoTrabajo; //Para profesores
+	private String seccionAsignada; //Para personal de servicio
 
-    public String getTipoDeEmpleado() {
-        return TipoDeEmpleado;
-    }
+	public Empleados(String nombre, String apellidos, String run, String estadoCivil, int anioIncorporacion,
+			String despacho, String tipoEmpleado, String departamentoTrabajo, String seccionAsignada) {
+		super(nombre, apellidos, run, estadoCivil);
+		this.anioIncorporacion = anioIncorporacion;
+		this.despacho = despacho;
+		this.tipoEmpleado = tipoEmpleado;
+		this.departamentoTrabajo = departamentoTrabajo;
+		this.seccionAsignada = seccionAsignada;
+	}
 
-    public void setTipoDeEmpleado(String TipoDeEmpleado) {
-        this.TipoDeEmpleado = TipoDeEmpleado;
-    }
+	@Override
+	public String toString() {
+		return "Empleados [anioIncorporacion=" + anioIncorporacion + ", despacho=" + despacho + ", tipoEmpleado="
+				+ tipoEmpleado + ", departamentoTrabajo=" + departamentoTrabajo + ", seccionAsignada=" + seccionAsignada
+				+ "]";
+	}
 
-    public String getDepartamentoTrabajo() {
-        return DepartamentoTrabajo;
-    }
+	public int getAnioIncorporacion() {
+		return anioIncorporacion;
+	}
 
-    public void setDepartamentoTrabajo(String DepartamentoTrabajo) {
-        this.DepartamentoTrabajo = DepartamentoTrabajo;
-    }
 
-    public String getSeccionAsignada() {
-        return SeccionAsignada;
-    }
+	public void setAnioIncorporacion(int anioIncorporacion) {
+		this.anioIncorporacion = anioIncorporacion;
+	}
 
-    public void setSeccionAsignada(String SeccionAsignada) {
-        this.SeccionAsignada = SeccionAsignada;
-    }
 
-    @Override
-    public String toString() {
-        return "Empleados{" + "TipoDeEmpleado=" + TipoDeEmpleado + ", DepartamentoTrabajo=" + DepartamentoTrabajo + ", SeccionAsignada=" + SeccionAsignada + '}';
-    }
-    
-    
+	public String getDespacho() {
+		return despacho;
+	}
+
+
+	public void setDespacho(String despacho) {
+		this.despacho = despacho;
+	}
+
+
+	public String getTipoEmpleado() {
+		return tipoEmpleado;
+	}
+
+
+	public void setTipoEmpleado(String tipoEmpleado) {
+		this.tipoEmpleado = tipoEmpleado;
+	}
+
+
+	public String getDepartamentoTrabajo() {
+		return departamentoTrabajo;
+	}
+
+
+	public void setDepartamentoTrabajo(String departamentoTrabajo) {
+		this.departamentoTrabajo = departamentoTrabajo;
+	}
+
+
+	public String getSeccionAsignada() {
+		return seccionAsignada;
+	}
+
+
+	public void setSeccionAsignada(String seccionAsignada) {
+		this.seccionAsignada = seccionAsignada;
+	}
+
 }

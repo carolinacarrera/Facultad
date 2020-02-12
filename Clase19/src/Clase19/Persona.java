@@ -8,7 +8,6 @@ public class Persona {
 	private String estadoCivil;
 
 	public Persona(String nombre, String apellidos, String run, String estadoCivil) {
-		super();
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.run = run;

@@ -6,10 +6,20 @@ public class Estudiantes extends Persona{
 
 	public Estudiantes(String nombre, String apellidos, String run, String estadoCivil, String curso) {
 		super(nombre, apellidos, run, estadoCivil);
-		// TODO Auto-generated constructor stub
 		this.curso = curso;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "Estudiantes [curso=" + curso + "]";
+	}
+
+	public String getCurso() {
+		return curso;
+	}
+
+	public void setCurso(String curso) {
+		this.curso = curso;
+	}
 	
 }
