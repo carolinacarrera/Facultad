@@ -2,11 +2,11 @@ package Clase19;
 
 public class Empleados extends Persona {
 //empleados
-String TipoDeEmpleado;
+private String TipoDeEmpleado;
 //Profesores
-String DepartamentoTrabajo;
+private String DepartamentoTrabajo;
 //Personal de Servicio
-String SeccionAsignada;
+private String SeccionAsignada;
 
     public Empleados(String TipoDeEmpleado, String DepartamentoTrabajo, String SeccionAsignada, String nombre, String apellidos, String rut, String Estadocivil) {
         super(nombre, apellidos, rut, Estadocivil);
