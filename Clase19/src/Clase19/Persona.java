@@ -12,7 +12,7 @@ public class Persona {
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.run = run;
-		this.estadoCivil =  estadoCivil;
+		this.estadoCivil =  estadoCivil; 
 	}
 
 	@Override
