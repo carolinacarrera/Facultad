@@ -22,4 +22,8 @@ public class Estudiantes extends Persona{
 		this.curso = curso;
 	}
 	
+	public void imprimir() {
+		super.imprimir();
+		System.out.println("Curso: " + getCurso());
+	}
 }
