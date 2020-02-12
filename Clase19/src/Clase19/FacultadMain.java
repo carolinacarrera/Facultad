@@ -64,7 +64,7 @@ public class FacultadMain {
 
 				System.out.println("Nombre Profesor");
 				String nombreProfesor = lector.next(); //se lee la opcion ingresada
-
+				
 				System.out.println("Apellido Profesor");
 				String apellidoProfesor = lector.next(); //se lee la opcion ingresada
 
