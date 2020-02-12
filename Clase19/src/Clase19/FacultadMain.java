@@ -62,6 +62,7 @@ public class FacultadMain {
 				String estadoCivilEstudiante = lector.next(); //se lee la opcion ingresada
 				
 				System.out.println("Curso del Estudiante");
+
 				String cursoEstudiante = lector.next(); //se lee la opcion ingresada
 				
 				Estudiantes estudiante1 = new Estudiantes (nombreEstudiante, apellidoEstudiante, rutEstudiante, estadoCivilEstudiante, cursoEstudiante);
