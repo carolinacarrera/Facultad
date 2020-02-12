@@ -9,12 +9,20 @@ public class Empleados extends Persona {
 	private String seccionAsignada; //Para personal de servicio
 
 	public Empleados(String nombre, String apellidos, String run, String estadoCivil, int anioIncorporacion,
-			String despacho, String tipoEmpleado, String departamentoTrabajo, String seccionAsignada) {
+			String despacho, String tipoEmpleado, String departamentoTrabajo) {
 		super(nombre, apellidos, run, estadoCivil);
 		this.anioIncorporacion = anioIncorporacion;
 		this.despacho = despacho;
 		this.tipoEmpleado = tipoEmpleado;
 		this.departamentoTrabajo = departamentoTrabajo;
+	}
+	
+	public Empleados(String nombre, String apellidos, String run, int anioIncorporacion, String estadoCivil, 
+			String despacho, String tipoEmpleado, String seccionAsignada) {
+		super(nombre, apellidos, run, estadoCivil);
+		this.anioIncorporacion = anioIncorporacion;
+		this.despacho = despacho;
+		this.tipoEmpleado = tipoEmpleado;
 		this.seccionAsignada = seccionAsignada;
 	}
 
