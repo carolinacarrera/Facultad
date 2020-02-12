@@ -64,7 +64,7 @@ public class FacultadMain {
 				System.out.println("Curso del Estudiante");
 				String cursoEstudiante = lector.next(); //se lee la opcion ingresada
 				
-				Estudiantes estudiante1 = new Estudiantes (nombreEstudiante, apellidoEstudiante, rutEstudiante, estadoCivilEstudiante, cursoEstudiante)
+				Estudiantes estudiante1 = new Estudiantes (nombreEstudiante, apellidoEstudiante, rutEstudiante, estadoCivilEstudiante, cursoEstudiante);
 			}
 			}
 		} 
