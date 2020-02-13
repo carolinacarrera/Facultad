@@ -11,54 +11,106 @@ public class FacultadMain {
 	static List<Empleados>ListaProfesores = new ArrayList <Empleados>();
 	static List<Empleados>listaPersonalServicio=new ArrayList<Empleados>();
 	static int opcionMenu1 = 100;
-	
+
+
+	public static void modificar() {
+		Scanner lector = new Scanner (System.in);
+		System.out.println("INGRESE OPCION A MODIFICAR");
+		System.out.println("");
+		System.out.println("1.- Estudiantes");
+		System.out.println("2.- Profesor");
+		System.out.println("3.- Personal de Servicio");
+
+		int opcion = lector.nextInt();
+
+		switch (opcion) {
+		case 1:
+			
+			System.out.println("Ingrese RUN de estudiante a modificar: ");
+			String run = lector.next();
+			
+			for (Estudiantes est:ListaEstudiantes) {
+				if (est.getRun().equals(run)){
+					System.out.println("nuevo Estado civil: ");
+					String estcivil = lector.next();
+					est.setEstadoCivil(estcivil);
+					
+					System.out.println("nuevo Cursol: ");
+					String curso = lector.next();
+					est.setCurso(curso);
+				}
+			}
+			
+			break; 
+
+		case 2:
+
+			break;	
+
+		case 3:
+
+			break;
+
+		default:
+			System.out.println("Ingrese una opcion valida");
+			break;
+		}
+
+	}
+
+
+
+
+
+
+
 	public static void mostrar() {
-	
-	Scanner lector = new Scanner (System.in);
-	System.out.println("Ingrese opcion a mostar");
-	System.out.println("");
-	System.out.println("1.- Estudiantes");
-	System.out.println("2.- Profesor");
-	System.out.println("3.- Personal de Servicio");
-	
-	int opcion = lector.nextInt();
-	
-    switch (opcion) {
-	case 1:
-		for (Estudiantes mostrarEstudiantes: ListaEstudiantes) {
-			System.out.println(mostrarEstudiantes);
+
+		Scanner lector = new Scanner (System.in);
+		System.out.println("INGRESE OPCION A MOSTRAR");
+		System.out.println("");
+		System.out.println("1.- Estudiantes");
+		System.out.println("2.- Profesor");
+		System.out.println("3.- Personal de Servicio");
+
+		int opcion = lector.nextInt();
+
+		switch (opcion) {
+		case 1:
+			for (Estudiantes mostrarEstudiantes: ListaEstudiantes) {
+				System.out.println(mostrarEstudiantes);
+			}
+			break; 
+
+		case 2:
+			for (Empleados mostrarprofes: ListaProfesores) {
+				System.out.println(mostrarprofes);
+
+			}
+			break;	
+
+		case 3:
+			for (Empleados mostrarPservicio: listaPersonalServicio) {
+				System.out.println(mostrarPservicio);
+			}
+			break;
+
+		default:
+			break;
 		}
 
-		break; 
-	
-	case 2:
-		for (Empleados mostrarprofes: ListaProfesores) {
-			System.out.println(mostrarprofes);
 
-		}
-		break;	
-	
-	case 3:
-		for (Empleados mostrarPservicio: listaPersonalServicio)
-		System.out.println(mostrarPservicio);
-		break;
-		
-	default:
-		break;
 	}
-	
-		
-	}
-	
-	
-	
+
+
+
 	public static void agregar() {
-		
+		System.out.println("INGRESE OPCION A INGRESAR");
 		System.out.println("1. Estudiante");
 		System.out.println("2. Profesor");
 		System.out.println("3. Personal de servicio");
 		System.out.println("4. Volver");
-		
+
 		Scanner lector = new Scanner (System.in);
 		int opcion = lector.nextInt(); //se lee la opcion ingresada
 
@@ -144,55 +196,53 @@ public class FacultadMain {
 		default:
 
 			System.out.println("Opcion no valida");
-		
+
 		}//cierra Switch
 	}//cierra metodo
 
-public static void main(String[] args) {
+	private static void salir() {
+		System.out.println("Chao pescao :) ");
+	} 
+	
+	public static void main(String[] args) {
 		//Menu del programa y lector de variables.
 
-	do {
-		
-		Scanner lector = new Scanner (System.in);
-		
-		System.out.println("Menu");
-		System.out.println(" ");
-		System.out.println("1. Agregar");
-		System.out.println("2. Mostrar");
-		System.out.println("3. Modificar");
-		System.out.println("4. Salir");
-		System.out.println(" ");
+		do {
 
-		System.out.print("Elija su opcion: ");
-		int opcionMenu1 = lector.nextInt(); //se lee la opcion ingresada
-		
-		switch (opcionMenu1) {
-		
-		
-		case 1:
-			agregar();
-			
-			break;
+			Scanner lector = new Scanner (System.in);
 
-			
-		case 2:
-			mostrar();
-			
-			break;
-			
-			/*break;
-		case '3':
-			
-			modificar();
-			
-			break;*/
-	
-		default:
-			break;
-		
-		
-	}
-	}while (opcionMenu1 != 4);	
+			System.out.println("Menu");
+			System.out.println(" ");
+			System.out.println("1. Agregar");
+			System.out.println("2. Mostrar");
+			System.out.println("3. Modificar");
+			System.out.println("4. Salir");
+			System.out.println(" ");
+
+			System.out.print("Elija su opcion: ");
+			int opcionMenu1 = lector.nextInt(); //se lee la opcion ingresada
+
+			switch (opcionMenu1) {
+
+
+			case 1:
+				agregar();
+				break;
+			case 2:
+				mostrar();
+				break;
+			case 3:
+				modificar();
+				break;
+			case 4:
+				salir();
+				break;
+			default:
+				System.out.println("Ingrese una opcion valida");
+				break;
+
+			}
+		}while (opcionMenu1 != 4);	
 
 	}
 
