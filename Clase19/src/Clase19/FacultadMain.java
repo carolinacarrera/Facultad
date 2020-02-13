@@ -10,8 +10,6 @@ public class FacultadMain {
 	static List<Estudiantes>ListaEstudiantes = new ArrayList <Estudiantes>();
 	static List<Empleados>ListaProfesores = new ArrayList <Empleados>();
 	static List<Empleados>listaPersonalServicio=new ArrayList<Empleados>();
-	static int opcionMenu1 = 100;
-
 
 	public static void modificar() {
 		Scanner lector = new Scanner (System.in);
@@ -31,11 +29,12 @@ public class FacultadMain {
 			
 			for (Estudiantes est:ListaEstudiantes) {
 				if (est.getRun().equals(run)){
+					System.out.println("Modificando datos de " + est.getNombre() + " " + est.getApellidos());
 					System.out.println("nuevo Estado civil: ");
 					String estcivil = lector.next();
 					est.setEstadoCivil(estcivil);
 					
-					System.out.println("nuevo Cursol: ");
+					System.out.println("nuevo Curso: ");
 					String curso = lector.next();
 					est.setCurso(curso);
 				}
@@ -207,9 +206,11 @@ public class FacultadMain {
 	public static void main(String[] args) {
 		//Menu del programa y lector de variables.
 
+		Scanner lector = new Scanner (System.in);
+
+		int opcionMenu1;
 		do {
 
-			Scanner lector = new Scanner (System.in);
 
 			System.out.println("Menu");
 			System.out.println(" ");
@@ -220,7 +221,7 @@ public class FacultadMain {
 			System.out.println(" ");
 
 			System.out.print("Elija su opcion: ");
-			int opcionMenu1 = lector.nextInt(); //se lee la opcion ingresada
+			opcionMenu1 = lector.nextInt(); //se lee la opcion ingresada
 
 			switch (opcionMenu1) {
 
