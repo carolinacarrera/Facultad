@@ -15,25 +15,28 @@ public class FacultadMain {
 	public static void mostrar() {
 	
 	Scanner lector = new Scanner (System.in);
-	int opcion = lector.nextInt();
-
 	System.out.println("Ingrese opcion a mostar");
 	System.out.println("");
 	System.out.println("1.- Estudiantes");
 	System.out.println("2.- Profesor");
 	System.out.println("3.- Personal de Servicio");
 	
+	int opcion = lector.nextInt();
+	
     switch (opcion) {
-	case '1':
-		
-		System.out.println(ListaEstudiantes);
+	case 1:
+		for (Estudiantes mostrar: ListaEstudiantes) {
+			System.out.println(mostrar);
+		}
+
 		break; 
 	
-	case '2':
+	case 2:
 		
 		System.out.println(ListaProfesores);
 		break;	
-	case '3':
+	
+	case 3:
 		
 		System.out.println(listaPersonalServicio);
 		break;
@@ -187,7 +190,7 @@ public static void main(String[] args) {
 		
 		
 	}
-	}while (opcionMenu1 == 4);	
+	}while (opcionMenu1 != 4);	
 
 	}
 

@@ -11,7 +11,7 @@ public class Estudiantes extends Persona{
 
 	@Override
 	public String toString() {
-		return "Estudiantes [curso=" + curso + "]";
+		return "Estudiantes ["+ super.toString() + "curso=" + curso+"]";
 	}
 
 	public String getCurso() {
