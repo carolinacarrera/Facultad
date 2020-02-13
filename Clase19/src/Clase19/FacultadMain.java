@@ -25,8 +25,8 @@ public class FacultadMain {
 	
     switch (opcion) {
 	case 1:
-		for (Estudiantes mostrar: ListaEstudiantes) {
-			System.out.println(mostrar);
+		for (Estudiantes mostrarEstudiantes: ListaEstudiantes) {
+			System.out.println(mostrarEstudiantes);
 		}
 
 		break; 
