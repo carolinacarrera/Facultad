@@ -32,13 +32,15 @@ public class FacultadMain {
 		break; 
 	
 	case 2:
-		
-		System.out.println(ListaProfesores);
+		for (Empleados mostrarprofes: ListaProfesores) {
+			System.out.println(mostrarprofes);
+
+		}
 		break;	
 	
 	case 3:
-		
-		System.out.println(listaPersonalServicio);
+		for (Empleados mostrarPservicio: listaPersonalServicio)
+		System.out.println(mostrarPservicio);
 		break;
 		
 	default:
