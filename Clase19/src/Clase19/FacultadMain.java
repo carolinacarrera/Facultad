@@ -64,7 +64,7 @@ public class FacultadMain {
 
 				System.out.println("Nombre Profesor");
 				String nombreProfesor = lector.next(); //se lee la opcion ingresada
-				
+
 				System.out.println("Apellido Profesor");
 				String apellidoProfesor = lector.next(); //se lee la opcion ingresada
 
@@ -83,7 +83,7 @@ public class FacultadMain {
 				System.out.println("Despacho: ");
 				String Despacho = lector.next();
 
-				Empleados profesor1 = new Empleados(nombreProfesor, apellidoProfesor, rutProfesor,estadoCivilProfesor, AniosAntiguedad, Despacho, Departamento);
+				Empleados profesor1 = new Empleados(nombreProfesor, apellidoProfesor, rutProfesor,estadoCivilProfesor, AniosAntiguedad, Despacho, Departamento,null);
 				listaProfesores.add(profesor1); 
 				break;
 			}
@@ -111,32 +111,32 @@ public class FacultadMain {
 				System.out.println("Seccion Asignada: ");
 				String SeccionAsignada= lector.next();
 
-				Empleados Pservicio1 = new Empleados(nombrePServicio, apellidoPServicio, rutPServicio,  AniosAntiguedad, estadoPServicio, DespachoPServicio, SeccionAsignada);
+				Empleados Pservicio1 = new Empleados(nombrePServicio, apellidoPServicio, rutPServicio,  estadoPServicio, AniosAntiguedad, DespachoPServicio, null,SeccionAsignada);
 				listaPersonalServicio.add(Pservicio1);
 				break;
-			
+
 			}
 			}
 		}
-		
 
-	  case 2:{
+
+		case 2:{
 			System.out.println("1. Mostrar datos de estudiante");
 			System.out.println("2. Mostrar datos de profesor");
 			System.out.println("3. Mostrar datos de personal de servicio");
-			
-			}
+
 		}
-			
-		
+		}
 
 
 
 
 
 
-		
-}
+
+		lector.close();
+
+	}
 
 
 }

@@ -6,20 +6,13 @@ public class Empleados extends Persona {
 	private String despacho;
 	private String departamentoTrabajo; //Para profesores
 	private String seccionAsignada; //Para personal de servicio
-
-	public Empleados(String nombre, String apellidos, String run, String estadoCivil, int anioIncorporacion,
-			String despacho, String departamentoTrabajo) {
+	
+	public Empleados(String nombre, String apellidos, String run, String estadoCivil, int anioIncorporacion, 
+			String despacho, String departamentoTrabajo, String seccionAsignada) {
 		super(nombre, apellidos, run, estadoCivil);
 		this.anioIncorporacion = anioIncorporacion;
 		this.despacho = despacho;
 		this.departamentoTrabajo = departamentoTrabajo;
-	}
-	
-	public Empleados(String nombre, String apellidos, String run, int anioIncorporacion, String estadoCivil, 
-			String despacho, String seccionAsignada) {
-		super(nombre, apellidos, run, estadoCivil);
-		this.anioIncorporacion = anioIncorporacion;
-		this.despacho = despacho;
 		this.seccionAsignada = seccionAsignada;
 	}
 
@@ -67,7 +60,6 @@ public class Empleados extends Persona {
 	}
 	
 	public void imprimir() {
-		//System.out.println("Nombre: " + getNombre() + "\n apellidos: " + getApellidos() + "\n Run: " + getRun() + "\n Estado Civil: " + getEstadoCivil());
 		super.imprimir();
 		System.out.println("Año Incorporación: " + getAnioIncorporacion() + "\n Despacho: " + getDespacho() + "\n Departamento Trabajo: " + getDepartamentoTrabajo() + "\n Sección Asignada" + getSeccionAsignada());
 	}
